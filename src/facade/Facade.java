@@ -1,6 +1,9 @@
 package facade;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
+import java.util.ArrayList;
 
 import data.Produto;
 import data.Lote;
@@ -17,20 +20,20 @@ public class Facade {
         this.loteService = new LoteService();
     }
 
-    public String criarProduto(String nome, String fabricante, double preco) {
+    public Produto criarProduto(String nome, String fabricante, double preco) {
         return produtoService.criarProduto(nome, fabricante, preco);
     }
 
-    public String criarLote(Produto p, int quantidade, Date dataVal) {
+    public Lote criarLote(Produto p, int quantidade, Date dataVal) {
         return loteService.criarLote(p, quantidade, dataVal);
     }
 
-    public void listarProdutos() {
-        produtoService.listarProdutos();
+    public Collection<Produto> listarProdutos() {
+        return produtoService.listarProdutos();
     }
 
-    public void listarLotes() {
-        loteService.listarLotes();
+    public Collection<Lote> listarLotes() {
+        return loteService.listarLotes();
     }
 
 }
