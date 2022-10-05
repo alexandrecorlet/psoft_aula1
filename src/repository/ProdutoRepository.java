@@ -20,6 +20,10 @@ public class ProdutoRepository {
         return id;
     }
 
+    public boolean containsProduto(Produto p) {
+        return produtos.containsValue(p);
+    }
+
     public Collection<Produto> getAll() {
         return produtos.values();
     }
