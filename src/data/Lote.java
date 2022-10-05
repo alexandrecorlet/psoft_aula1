@@ -56,7 +56,7 @@ public class Lote {
 
         return "ID LOTE: " + id + '\n'
                 + "Produto: " + produto.toString()
-                + "Validade: " + dataVal.toString() + '\n'
+                + "Validade: " + dataVal + '\n'
                 + "quantidade: " + quantidade;
 
     }
